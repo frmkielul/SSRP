@@ -27,11 +27,13 @@ SWEP.DrawCrosshair		= false
 SWEP.ViewModel			= "models/weapons/v_pistol.mdl"
 SWEP.WorldModel			= "models/weapons/w_pistol.mdl"
 
+-- Defining these here should work fine
+local ply = self.Owner
+local eyetrace = self.Owner:GetEyeTrace().Entity
+local MAX_DISTANCE_FROM_DOOR = 120
+
 function SWEP:PrimaryAttack()
-	local ply = self.Owner
-	local eyetrace = self.Owner:GetEyeTrace().Entity
-	
-	if (ply:GetPos():Distance(eyetrace:GetPos()) > 120) then
+	if (ply:GetPos():Distance(eyetrace:GetPos()) > MAX_DISTANCE_FROM_DOOR) then
 		return
 	else
 		ply:ConCommand("lockdoor")
@@ -39,10 +41,7 @@ function SWEP:PrimaryAttack()
 end
 	
 function SWEP:SecondaryAttack()
-	local ply = self.Owner
-	local eyetrace = self.Owner:GetEyeTrace().Entity
-	
-	if (ply:GetPos():Distance(eyetrace:GetPos()) > 120) then
+	if (ply:GetPos():Distance(eyetrace:GetPos()) > MAX_DISTANCE_FROM_DOOR) then
 		return
 	else
 		ply:ConCommand("unlockdoor")
