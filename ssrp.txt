@@ -1,0 +1,6 @@
+"SSRP"
+{
+	"base"		"sandbox"
+	"title"		"SSRP"
+	"maps"		"^rp_"
+}
