@@ -1,5 +1,0 @@
-- Update the column `job` in table `players` for the session, reset to 1 on player disconnect
-- Have the HUD show the salary that corrosponds with their job
-- Allow multiple property ownership
-- [Optional] Make the salary system more efficient (possible rewrite?)
-- Begin work on NPCs
