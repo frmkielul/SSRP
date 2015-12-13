@@ -27,7 +27,6 @@ SWEP.DrawCrosshair		= false
 SWEP.ViewModel			= "models/weapons/v_pistol.mdl"
 SWEP.WorldModel			= "models/weapons/w_pistol.mdl"
 
--- Defining these here should work fine
 local MAX_DISTANCE_FROM_DOOR = 120
 
 function SWEP:PrimaryAttack()
