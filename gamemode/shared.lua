@@ -60,7 +60,7 @@ if SERVER then
 			self:SetNWInt("bank", num)
 		end
 		function Player:AddBank(num)
-			self:SetNWInt("bank" self:GetBank()+num)
+			self:SetNWInt("bank", self:GetBank()+num)
 		end
 		
 		function Player:TakeBank(num)
